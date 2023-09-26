@@ -1,0 +1,67 @@
+<template>
+
+  <div class="container">
+    <div class="content" id="content">
+      <h2 class="title_nav">{{ layout.title }}</h2>
+
+      <div class="page_info">가입유형을 <br>선택해 주세요</div>
+
+      <div class="section">
+        <RadioActive
+          :data="{
+            option: { type:'ty05', itemList: 1, },
+            data: [
+              { checked:false, id:'step01_01', value:`번호이동 <span class='bag clr c06'>혜택</span>`, info:'지금 쓰고 있는 내 번호 그대로!', img:'/images/component/img_num_move.png' },
+              { checked:false, id:'step01_02', value:'신규가입', info:'새로운 번호가 필요해요!', img:'/images/component/img_num_new.png' },
+            ]
+          }"
+          @checkItem="next = $event"
+        />
+      </div> 
+
+      <div class="section">
+        <div class="box_gray">
+          <strong>셀프개통 업무시간 안내</strong>
+          <ul class="text_list bull">
+            <li>신규가입 : 오전8시 ~ 오후 8시 (평일/토요일)</li>
+            <li>번호이동 : 오전10시 ~ 오후 8시 (평일/토요일)</li>
+          </ul>
+        </div>
+      </div><!-- // section -->
+
+      <div class="bottom_float">
+        <div class="inner">
+          <div class="float_btn_wrap">
+            <div class="btn_group">
+              <button type="button" class="btn lg c01" v-bind:disabled="next == false">다음으로</button>
+            </div>
+          </div>
+        </div>
+      </div> <!-- // bottom_float -->
+
+    </div> <!-- // content -->
+  </div><!-- // container -->
+    
+</template>
+    
+<script>
+import RadioActive from '@/components/RadioActive'
+
+export default {
+  name: 'ALFM-PR03-PG00',
+  emits: ['setLayout', 'openPopup'],
+  data(){
+    return {
+      layout: { header: 'sub2', footer: 'none', title: '가입유형 선택', floatMenu: 'none' },
+      next: false,
+    }
+  },
+  mounted(){
+    this.$emit('setLayout', this.layout);
+  },
+  components:{
+    RadioActive
+  }
+}
+</script>
+  

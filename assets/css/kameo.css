@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* 임시 test */
+html.pc {font-size:12.5px;}
+/* .pc .header > .pc_header > .inner {max-width:960px;} */
+.pc .content {max-width:960px !important; width:960px !important;}
+.pc .compare_pop {max-width:960px !important;}
+.pc .swiper.cardSwiper.ty02 .swiper-slide {max-width:280px !important;}
+.pc .crp_wrap .crp_l {flex:auto; margin-right:0;}
+.pc .crp_wrap .crp_l,
+.pc .crp_wrap .crp_l .section.fixed {max-width:290px !important; width:290px !important;}
+.pc .crp_wrap .crp_r {flex:auto; max-width:638px !important; padding-left:24px;}
+.pc .crp_wrap .crp_l .section.fixed {margin-left:-463px;}
+.header {z-index:12;}
+
+/* vuetify customizing */
+.v-input {width:220px;}
+.v-rating__hidden {overflow:hidden;}
+
+.v-field {font-size:1.4rem;}
+.v-field__input {padding:0 !important;}
+.v-text-field input {min-height:4.8rem; padding:0 1.6rem;}
+/* .v-input__details {display:none;} */
+
+.form_item.auth_num .v-field__clearable {margin-right:11rem;}
+/* .form_item.auth_num .btn_del {right:12.5rem;} */
+.form_item.auth_num .timer {position:absolute; top:50%; right:1.7rem; font-size:0; line-height:2.2rem; transform:translateY(-50%);}
+.form_item.auth_num .timer * {display:inline-block; font-size:1.3rem; vertical-align:middle;}
+.form_item.auth_num .timer span {color:#fc6969;}
+.form_item.auth_num .timer button {margin-left:0.8rem; color:#909090; text-decoration:underline;}
+.form_item.auth_num .input:disabled ~ .timer span {color:#bbb;}

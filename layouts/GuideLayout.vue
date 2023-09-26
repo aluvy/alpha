@@ -1,0 +1,69 @@
+<template>
+	<div class="wrap">
+		<GuideHeader :page="page" :pageOn="pageOn" :pageInfo="pageInfo"/>
+    <NuxtPage />
+	</div>
+</template>
+
+<script>
+import GuideHeader from '@/layouts/GuideHeader'
+
+export default {
+  name: 'GuideLayout',
+  layout: 'guide-layout',
+  data(){
+    return {
+      page: [
+              { "name" : "Guide", "path" : "/guide/ListGuide" },
+              { "name" : "공통, etc", "path" : "/guide/ListCommon" },
+              { "name" : "메인", "path" : "/guide/ListMain" },
+              { "name" : "유심구매", "path" : "/guide/ListUsim" },
+              { "name" : "요금제", "path" : "/guide/ListRatePlan" },
+              { "name" : "혜택", "path" : "/guide/ListBeneFit" },
+              { "name" : "고객지원", "path" : "/guide/ListCS" },
+              { "name" : "마이페이지", "path" : "/guide/ListMypage" },
+              { "name" : "로그인", "path" : "/guide/ListLogin" },
+              { "name" : "푸터", "path" : "/guide/ListFooter" },
+            ],
+      pageOn: 0,
+      pageInfo: {"total": 0, "end": 0, "per": 0 },
+    }
+  },
+  watch: {
+    $route(){
+      this.getPageOn();
+    }
+  },
+  methods: {
+    getPageOn(){
+      this.page.forEach((a, i)=>{ if( this.$route.path.includes(a.path) ){ this.pageOn = i; } });
+      setTimeout(() => { this.getPageInfo() }, 0);
+    },
+    getPageInfo(){
+      let tr = document.querySelectorAll("tbody tr").length;
+      let hid = document.querySelectorAll("tbody tr.hid").length;
+
+      let end = document.querySelectorAll("tbody tr.end").length;
+      let mod = document.querySelectorAll("tbody tr.mod").length;
+      
+      let pageTotal = tr - hid;
+      let pageEnd = end + mod;
+      let pagePer = (pageEnd == 0 ) ? 0 : ( ( pageEnd * 100 ) / pageTotal ).toFixed(1);
+
+      this.pageInfo.total = pageTotal;
+      this.pageInfo.end = pageEnd;
+      this.pageInfo.per = pagePer;
+    }
+  },
+  mounted(){
+    this.getPageOn();
+  },
+  components:{
+    GuideHeader,
+  },
+}
+</script>
+
+<style scoped>
+@import url(@/pages/guide/guide.css);
+</style>

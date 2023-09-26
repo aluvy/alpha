@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+
+@media screen and (min-width:640px) and (max-width:99999px){
+  /***** popup *************************************************************************************************/
+  .pop_layer.normal {align-items:center;}
+  .pop_layer.normal > .pop_wrap {max-height:calc(100% - 5.2rem); border-radius:1.2rem;}
+  .pop_layer.normal .pop_header {padding-right:4.8rem; padding-left:2.4rem;}
+  .pop_layer.normal .pop_header h3{line-height:2.2rem;}
+  .pop_layer.normal .pop_content{padding:0 2.4rem 1.6rem;}
+  .pop_layer.normal .pop_footer{padding-left:2.4rem; padding-right:2.4rem;}
+  .pop_layer.normal .pop_close{top:2.4rem; right:2.4rem;}
+  
+  .pop_layer.full {align-items:center;}
+  .pop_layer.full > .pop_wrap {height:auto; max-height:calc(100% - 5.2rem); border-radius:1.2rem;}
+  .pop_layer.full .pop_wrap.height_fix {height:calc(100% - 5.2rem);}
+  .pop_layer.full .pop_header {padding:2.4rem 6.4rem 2.4rem 2.4rem;}
+  .pop_layer.full .pop_header h3 {font-size:1.9rem; line-height:2.2rem;}
+  .pop_layer.full .pop_content {padding: 0 2.4rem 2.4rem;}
+  .pop_layer.full .pop_footer {padding:0 2.4rem 2.4rem;}
+  .pop_layer.full .pop_close {top:1.5rem; right:1.2rem;}
+  /* [ALFM-CM07-PO00] 지도 보기 팝업 */
+  .pop_layer.map_pop .pop_content{padding-bottom:0;}
+  .pop_layer.map_pop .map_area {margin:0 -2.4rem;}
+
+
+  /***** sort **************************************************************************************************/
+  .sort_layer {align-items:center;}
+  .sort_layer .sort_layer_wrap { border-radius:0.8rem; transform:translateY(0) scale(50%);}
+  .sort_layer.open .sort_layer_wrap {transform:scale(100%);}
+
+
+  /***** 요금제 *************************************************************************************************/
+  /* [ALFM-PR01-PG01] 요금제 상세 : 내 주변 매장 찾기 배너 */
+  .con_bnr > a {padding:1.2rem 1.2rem 1.2rem 2rem;}
+  .con_bnr > a img {width:6.2rem;}
+
+
+  /***** 기타 ***************************************************************************************************/
+  /* 비교하기 플로팅 */
+  .comp_item_area .comp_item > div {padding:2rem;}
+  .comp_item_area .comp_item > div em {font-size:1.5rem; line-height:1.8rem;}
+
+  /* 꼼꼼하게 찾기 팝업 */
+  .pop_layer.filter_pop .pop_wrap {min-height:70%; max-height:70%; width:75rem; max-width:none;}
+  .pop_layer.filter_pop .tag_list02 > ul {padding:0 2.4rem;}
+  .pop_layer.filter_pop .tab_list02 > ul {padding:0 2.4rem;}
+  .pop_layer.filter_pop .pop_content .tab_list02 {margin-right:-2.4rem; margin-left:-2.4rem;}
+  .pop_layer.filter_pop .pop_footer .btn_group .reset{max-width:13.2rem;}
+  /* 꼼꼼하게 찾기 팝업 : 선택된 필터 */
+  .filter_keyword{margin:0 -2.4rem;}
+}
+
+@media screen and (min-width:0) and (max-width:320px){
+  /* [ALFM-PR02-PO07] 내게 맞는 요금제 찾기 > STEP6_추천 요금제 보기 > 그래프 */
+  .graph_wrap .inner .caption{font-size:1rem;}
+  .graph_wrap .inner .price{bottom:60%;}
+  .graph_wrap .inner .after .price{bottom:24%;}
+  .graph_wrap .inner .price span{font-size:1.1rem;}
+  .graph_wrap .inner .before p,
+  .graph_wrap .inner .after p{bottom:5%; font-size:1.1rem;}
+  .graph_wrap .inner .before .price::after,
+  .graph_wrap .inner .after .price::after{width:1.2rem; height:1.2rem; border-width:0.3rem;}
+}
+
+@media screen and (min-width:361px) and (max-width:640px){
+  .error_ie_area .cont{padding:2rem 3.3rem;}
+  .error_ie_area .cont ul{width:23.4rem;}
+  .error_ie_area .cont ul li{flex:0 0 4.3rem; font-size:1rem; line-height:1.4rem;}
+  .error_ie_area .cont ul li::before{width:4rem; height:4rem;}
+}
+
+@media screen and (min-width:0) and (max-width:360px){
+  .error_ie_area .cont ul{width:100%;}
+}
+
+/* @media screen and (max-width:360px){
+  html {font-size:9px;}
+} */
+
+
+
+
+
+
+/***** PC ****************************************************************************************************/
+/***** PC ****************************************************************************************************/
+/***** PC ****************************************************************************************************/
+.pc ::-webkit-scrollbar {width:6px; height:6px;}
+.pc ::-webkit-scrollbar-thumb {background-color:#ddd; border-radius:6px;}
+.pc ::-webkit-scrollbar-track {background-color:#fafafa; border-radius:6px;}
+
+.pc {overflow:auto;}
+
+.pc .pc_show {display:block!important;}
+.pc .pc_hide {display:none!important;}
+
+
+/***** layout ************************************************************************************************/
+.pc .wrap {min-width:96rem; height:auto;}
+.pc .content {padding-top:0;}
+
+.pc .title_nav {display:block; padding:6.4rem 1.6rem 0; font-size:1.6rem; font-weight:700; line-height:2.3rem; color:#000;}
+
+.pc .header {position:sticky; height:9.6rem; background:#ddd;}
+.pc .header > .inner {display:none;}
+.pc .header > .pc_header {display:block;}
+.pc .header > .pc_header {position:absolute; top:0; left:0; width:100%; background:#fff;}
+.pc .header > .pc_header::before {content:''; position:absolute; bottom:0; left:0; width:100%; height:0.1rem; background:#ddd;}
+.pc .header > .pc_header a {display:block;}
+.pc .header > .pc_header > .inner {display:flex; width:92.8rem; margin:0 auto;}
+.pc .header > .pc_header > .inner > *:not(nav) {height:9.6rem;}
+.pc .header > .pc_header > .inner h1 {display:flex; align-items:center; margin-right:7rem;}
+.pc .header > .pc_header > .inner h1 a {width:6rem; height:3.2rem; background:url(/images/common/logo_plusalpha.png) no-repeat center / 6rem auto;}
+.pc .header > .pc_header .nav {align-self:flex-start; min-width:56rem;}
+.pc .header > .pc_header .nav > ul {display:flex; width:100%;}
+.pc .header > .pc_header .nav > ul > li {flex:1; text-align:center;}
+.pc .header > .pc_header .nav .menu_class {display:flex; justify-content:center; align-items:center; width:100%; height:9.6rem; font-size:1.6rem; font-weight:700; color:#000;}
+.pc .header > .pc_header .nav .menu_class {position:relative; display:flex; justify-content:center; align-items:center; width:100%; height:9.6rem; font-size:1.6rem; font-weight:700; color:#000;}
+.pc .header > .pc_header .nav .menu_class.on::after{content:''; position:absolute; left:50%; top:50%; transform:translate(-50%, calc(-50% + 1.4rem)); display:block; width:4.2rem; height:0.2rem; background:#fc6969;}
+.pc .header > .pc_header .nav .sub_menu{display:none;}
+.pc .header > .pc_header .nav.on .sub_menu,
+.pc .header > .pc_header .nav:hover .sub_menu{display:block;}
+.pc .header > .pc_header .nav .sub_menu {margin-top:-2.5rem !important; }
+.pc .header > .pc_header .nav .sub_menu ul li:last-child {padding-bottom:2.8rem;}
+.pc .header > .pc_header .nav .sub_menu a {padding:1.2rem 0; font-size:1.4rem; line-height:1.6rem; color:#717171;}
+.pc .header > .pc_header .nav .sub_menu a sup {display:inline-block; margin-top:-0.5rem;}
+.pc .header > .pc_header .nav .sub_menu a.img_delivery {height:4rem; background:url(/images/common/menu_delivery.png) no-repeat center / auto 1.6rem;}
+.pc .header > .pc_header .nav .sub_menu li.on a{color:#fc6969; font-weight:700;}
+.pc .header > .pc_header .header_menu {margin-left:auto;}
+.pc .header > .pc_header .header_menu ul {display:flex; align-items:center; height:100%;}
+.pc .header > .pc_header .header_menu ul li {position:relative;}
+.pc .header > .pc_header .header_menu ul li a {font-size:1.2rem; line-height:3.1rem; color:#909090;}
+.pc .header > .pc_header .header_menu ul li:not(:first-child) {padding-left:0.9rem; margin-left:0.8rem;}
+.pc .header > .pc_header .header_menu ul li:not(:first-child)::before {content:''; position:absolute; top:50%; left:0; display:block; width:0.1rem; height:0.8rem; margin-top:-0.4rem; background:#ddd;}
+
+.pc .aside {display:none;}
+
+.pc .footer > .inner {max-width:96rem;}
+
+.pc .aside_float > .inner {bottom:4rem !important; z-index:10;}
+.pc .aside_float .btn_reco {display:block;}
+
+
+
+/***** sort **************************************************************************************************/
+.pc .sort_pop {position:relative; white-space:nowrap; z-index:11;}
+
+.pc .sort_layer {position:absolute; top:calc(100% + 0.4rem); bottom:auto; left:auto; height:auto; z-index:5;}
+.pc .sort_layer::before {display:none;}
+.pc .sort_layer .sort_layer_wrap {width:auto; max-width:none; max-height:none; padding:0.5rem 0.2rem; box-shadow:0 1rem 2rem 0 rgba(0, 0, 0, 0.08); border-radius:0.8rem; transform:none; transition:none;}
+.pc .sort_layer .sort_layer_header {display:none;}
+.pc .sort_layer .sort_layer_content {padding:0;}
+.pc .sort_layer .sort_layer_close {display:none;}
+
+.pc .sort_layer .sort_group > li {margin-top:.2rem;}
+.pc .sort_layer .sort_group > li button {padding:1.2rem 1.4rem;}
+
+
+
+/***** swiper ************************************************************************************************/
+/* cardSwiper */
+.pc .swiper.cardSwiper.activeIndex{padding-left:4.4rem;}
+.pc .cardSwiper .swiper-navigation{display:block;}
+.pc .cardSwiper .swiper-navigation .left,
+.pc .cardSwiper .swiper-navigation .right{position:absolute; top:1rem; width:4rem; height:calc(100% - 1rem); margin:0; z-index:2;}
+.pc .cardSwiper .swiper-navigation .left{left:0; background:linear-gradient(270deg, rgba(255, 255, 255, 0) 5%, #fff 60%);}
+.pc .cardSwiper .swiper-navigation .right{right:0; background:linear-gradient(90deg, rgba(255, 255, 255, 0) 5%, #fff 60%);}
+.pc .cardSwiper .swiper-button-prev::after,
+.pc .cardSwiper .swiper-button-next::after {display:none;}
+/* .pc .cardSwiper .swiper-button-prev,
+.pc .cardSwiper .swiper-button-next{width:3.2rem; height:3.2rem; border-radius:3.2rem; border:1px solid #ededed; box-shadow:0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.04); background:url(/images/common/ico_swiperR.svg) center center no-repeat #fff; background-size:0.9rem auto;} */
+.pc .cardSwiper .swiper-button-prev,
+.pc .cardSwiper .swiper-button-next{width:3.2rem; height:3.2rem; border-radius:3.2rem; border:1px solid #ededed; box-shadow:0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.04); background-color:#fff;}
+.pc .cardSwiper .swiper-button-prev::after,
+.pc .cardSwiper .swiper-button-next::after{content:''; display:block; width:2.4rem; height:2.4rem; background:url(/images/common/ico_arrow_12.png) 0 0 / 40rem auto no-repeat; transform:rotate(-90deg);}
+
+.pc .cardSwiper .swiper-button-prev{transform:scaleX(-1); left:0;}
+.pc .cardSwiper .swiper-button-next{right:0;}
+.pc .cardSwiper .swiper-button-prev.swiper-button-disabled,
+.pc .cardSwiper .swiper-button-next.swiper-button-disabled{display:none;}
+.pc .cardSwiper.isEnd .swiper-navigation .right{display:none;}
+.pc .cardSwiper.isBeginning .swiper-navigation .left{display:none;}
+
+/* [CM08PO00] cardSwiper:: Esim 내 휴대폰 설정에서 개통하는 방법 */
+.pc .cardSwiper.ty04 .swiper-navigation .left,
+.pc .cardSwiper.ty04 .swiper-navigation .right{background:none;}
+
+/* bnrSwiper */
+.pc .swiper.bnrSwiper {padding-bottom:0;}
+.pc .swiper.bnrSwiper .swiper-pagination{bottom:2rem; left:auto; right:4rem; width:auto;}
+
+
+
+/***** 요금제 카드 *********************************************************************************************/
+.pc .plan_item .combi {justify-content:flex-start; align-items:center; text-align:left;}
+.pc .plan_item .combi .combi_inner {display:block; order:1;}
+.pc .plan_item .combi .combi_inner .period {display:inline-block; margin-left:0.4rem; margin-top:0;}
+.pc .plan_item .combi .choice {flex:none; width:100%; margin-top:1.2rem; order:3;}
+.pc .plan_item .combi .btn {display:inline-block; min-width:12rem; margin-left:auto; order:2;}
+
+.pc .plan_item .bag_list {display:block;}
+.pc .plan_item .bag_list ul {display:flex;}
+.pc .plan_item .bag_list ul > li ~ li{margin-left:-0.7rem;}
+
+/* swiper in card */
+.pc .cardSwiper .plan_item .card_mid .plan_tit,
+.pc .cardSwiper .plan_item .card_mid .plan_tit_sub {font-size:1.5rem; line-height:2.2rem;}
+.pc .cardSwiper .plan_item .combi_inner strong {display:block;}
+.pc .cardSwiper .plan_item .combi_inner .period {display:block; margin-left:0;}
+
+
+
+/***** accordion *********************************************************************************************/
+/* [ALFM-PR01-PG01] ty03 : 요금제 상세정보 (PC 에서만 디자인 다름) */
+.pc .acd_wrap .acd_item.ty03{background:transparent; border-bottom:1px solid #ddd;}
+.pc .acd_wrap .acd_item.ty03 + .acd_item.ty03{margin-top:0;}
+.pc .acd_wrap .acd_item.ty03:first-child{border-top:1px solid #000;}
+.pc .acd_wrap .acd_item.ty03 .acd_title .v-expansion-panel-title{padding:2rem 0.8rem;}
+.pc .acd_wrap .acd_item.ty03 .acd_panel .v-expansion-panel-text__wrapper{padding:0 0.8rem 2rem;}
+.pc .acd_wrap.v-expansion-panels:not(.any) > .acd_item.ty03.v-expansion-panel:not(.any){border-radius:0 !important;}
+
+
+
+/***** main **************************************************************************************************/
+.pc .main_service a {font-size:1.4rem; line-height:2rem;}
+.pc .main_partner > ol .partner strong {font-size:1.9rem; line-height:2.6rem;}
+.pc .main_partner > ol p {font-size:1.3rem; line-height:1.9rem;}
+.pc .main_top .link_plan i {width:20.5rem; height:13.5rem;}
+
+
+
+/***** 기타 ***************************************************************************************************/
+.pc .page_info {padding-top:1.2rem;}
+
+/* 비교하기 플로팅 */
+.pc .compare_pop {max-width:60.8rem;}
+.pc .compare_pop.wide {max-width:92.8rem;}
+
+/* list item */
+.pc .list_con .date span.pc_show {display:inline-block !important;}
+.pc .list_con .bo_btn_list .btn_bo.call {display:none;}
+
+/* footer contents */
+.pc ol.list.decimal {display:flex; flex-wrap:wrap;}
+.pc ol.list.decimal li {width:calc(50% - 1.5rem);}
+.pc .terms .list .link {text-decoration:none;}
+.pc .terms .list .link:hover {text-decoration:underline;}
+.pc .terms_wrap .info_files {display:flex; justify-content:space-between;}
+.pc .terms_wrap .info_files .box_gray {width:calc(50% - .6rem); margin-top:0;}
+.pc .list_version .btn_select {flex:none; width:30rem;}
+
+/* [ALFM-PR01-PG01, ALFM-MA01-PG03] 탭 : 사용자 리뷰 */
+.pc .review_point .detail dt {color:#000;}
+
+/* [ALFM-BU01-PG00] 유심구매 > 바로배송 PC에서만 타이틀+배너 사이 여백 (23.09.13 수정) */
+.pc .dlvr_banner{margin-top:1.2rem;}
+
+/* pagination */
+.pc .pc_show.pagination {display:flex !important;}
+
+
+
+/***** 요금제 *************************************************************************************************/
+.pc .cont_ratePlan {max-width:96rem;}
+.pc .cont_ratePlan .title_nav {display:flex; justify-content:space-between;}
+.pc .cont_ratePlan .title_nav .btn_share {font-weight:500;}
+
+/* [ALFM-PR01-PG01] 요금제 상세 하단 플로팅 */
+.pc .plan_join > div {max-width:96rem;}
+.pc .plan_join .btn{min-width:24rem}
+
+/* [ALFM-PR01-PG00] 요금제 */
+.pc .crp_wrap {display:flex; padding:1.2rem 1.6rem 0;}
+.pc .crp_wrap .crp_l {flex:1 1 28.8rem; max-width:28.8rem; margin-right:3.2rem;}
+.pc .crp_wrap .crp_r {flex:1 1 60.8rem; max-width:60.8rem;}
+
+.pc .crp_wrap .section {padding-left:0; padding-right:0;}
+
+.pc .crp_wrap .crp_l .section:first-child {padding-top:0;}
+.pc .crp_wrap .crp_l .section.fixed{position:fixed; left:50%; top:9.6rem; margin-left:-46.4rem; width:28.8rem; height:calc(100% - 9.6rem); overflow-y:scroll; box-sizing:border-box; padding:1.2rem 0 7rem; background:#fff; z-index:2;}
+.pc .crp_wrap .crp_l .tag_list {margin-left:0; margin-right:0;}
+.pc .crp_wrap .crp_l .tag_list > ul > li.other {display:none;}
+.pc .crp_wrap .crp_l .tag_list.variable > button {display:none;}
+.pc .crp_wrap .crp_l .tag_list.variable > ul {padding:0; overflow-x:inherit; white-space:inherit;}
+
+.pc .crp_wrap .crp_l .filter_wrap {margin-bottom:3.2rem;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap {display:block;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .check_st {display:block; margin-right:0;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .check_st:not(:first-child) {margin-top:2rem;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .filter_detail {position:relative; display:block; width:100%; padding:1.22rem 1.92rem; margin-top:3.2rem; border:0.1rem solid #bbb; border-radius:0.8rem; background:#fff; color:#000; font-size:1.5rem; line-height:2.2rem; text-align:center;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .filter_detail::before {content:''; display:inline-block; width:1.6rem; height:1.6rem; margin-right:0.2rem; background:url(/images/common/ico_filter.png) no-repeat center / 100% auto; vertical-align:text-top;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .filter_detail.on {border-color:#fc6969; color:#fc6969;}
+.pc .crp_wrap .crp_l .filter_wrap .check_wrap .filter_detail.on::before {background-image:url(/images/common/ico_filter_active.png);}
+
+.pc .crp_wrap .crp_l .filter_other {display:block;}
+.pc .crp_wrap .crp_l .filter_tit {display:block;}
+
+.pc .crp_wrap .crp_l .bnr_area {display:block;}
+.pc .crp_wrap .crp_l .partner_bnr {margin-bottom:3.2rem;}
+
+.pc .crp_wrap .crp_r .cardSwiper.swiper {margin-right:0;}
+.pc .crp_wrap .crp_r .item_list .btn_group {display:none;}
+.pc .crp_wrap .crp_r .item_list .pagination {display:flex;}
+
+/* scroll_fixed */
+.pc .crp_wrap .crp_l .scroll_fixed.on .filter_wrap {position:initial; top:auto !important; left:auto; width:auto; transform:translateX(0); z-index:auto;}
+
+/* [ALFM-PR01-PG00] 요금제 메인 : 꼼꼼하기 찾기로 선택된 필터 */
+.pc .cont_ratePlan .filter_keyword_pc {display:block; margin-top:1.2rem; border:solid 0.1rem #ddd; border-radius:1.2rem; background:#fff; overflow:hidden;}
+.pc .cont_ratePlan .filter_keyword_pc .tag_list02 {max-height:20rem; padding:1.5rem 1.7rem; margin:0; overflow:hidden; overflow-y:auto;}
+.pc .cont_ratePlan .filter_keyword_pc .tag_list02 > ul {padding:0; margin-bottom:-0.8rem; overflow-x:inherit; white-space:inherit;}
+.pc .cont_ratePlan .filter_keyword_pc .tag_list02 > ul > li {margin-bottom:0.8rem;}
+
+/* [ALFM-PR01-PG01] 요금제 상세 */
+.pc .plan_topCon .btn_share {display:none;}
+.pc .plan_con {padding:3.2rem;}
+.pc .plan_con .top {margin-bottom:3.2rem;}
+.pc .plan_con .top .beft img {height:2.4rem;}
+.pc .plan_con .tit em {margin-bottom:0.5rem; font-size:1.6rem; line-height:1.9rem;}
+.pc .plan_con .tit strong {font-size:3rem; line-height:3.5rem}
+.pc .plan_con .tit i {display:inline-block; min-width:40%; font-size:1.4rem;}
+.pc .plan_con .info {margin-top:3.2rem;}
+.pc .plan_con .info > div {display:flex; justify-content:center;}
+.pc .plan_con .info > div:not(:first-child)::before {top:0;}
+.pc .plan_con .info dl {padding-top:0.5rem; padding-left:4rem; text-align:left;}
+.pc .plan_con .info dl::before {top:0; left:0; width:3.2rem; height:3.2rem; transform:translateX(0);}
+.pc .plan_con .info dt {font-size:1.9rem; line-height:2.6rem;}
+.pc .plan_con .info dd {font-size:1.2rem; line-height:1.8rem;}
+
+/* [ALFM-PR01-PG01] 요금제 상세 : 부가서비스 */
+.pc .va_services {display:flex;}
+.pc .va_services > div {flex:1;}
+.pc .va_services > div ~ div {margin-top:0;}
+
+/* [ALFM-PR01-PG01] 요금제 상세: 요금제 상세정보 탭 > 초과 이용 요금 */
+.pc .ove_charge {padding:2rem; border-radius:1.2rem; background-color:#f8f8f8;}
+.pc .ove_charge dl {flex:1; width:auto; padding-left:5.2rem;}
+.pc .ove_charge dl ~ dl {margin-left:0.8rem;}
+.pc .ove_charge dl:nth-child(2) ~ dl {margin-top:0;}
+
+
+
+/***** 고객지원 ************************************************************************************************/
+/* [ALFM-CS02-PG00] 내 주변 매장 찾기 */
+.pc .cont_map {max-width:96rem; padding-bottom:3.2rem;}
+.pc .cont_map .cm_wrap {flex-direction:initial; height:81.2rem; padding-right:1.6rem;}
+.pc .cont_map .cm_wrap .map_area {border-radius:1.2rem; margin-top:1.2rem;}
+
+.pc .shop_search_area {display:flex; flex-direction:column; width:40rem; margin-right:1.6rem;}
+.pc .shop_none {position:initial;}
+
+.pc .shop_area {flex:1; display:flex; flex-direction:column; overflow:hidden;}
+
+.pc .shop_check {z-index:2;}
+.pc .shop_check .but {padding-right:5.7rem; box-shadow:none;}
+.pc .shop_check .tip_more {top:1.9rem; left:auto; right:1.6rem; min-height:auto; padding:0; border-radius:0; background-color:transparent; font-size:1.2rem; line-height:1.8rem; color:#909090; transform:translateX(0); z-index:1;}
+.pc .shop_check .tip_more span {padding-left:2rem;}
+.pc .shop_check .tip_more span::before {width:1.6rem; height:1.6rem; margin-top:-0.8rem; background:url(/images/common/ico_tooltip.png) 0 0 / 100% auto no-repeat;}
+.pc .shop_check .tip_more::before,
+.pc .shop_check .tip_more::after {content:""; position:absolute; bottom:-1.1rem; left:0.2rem; display:none; height:0; width:0; border-bottom:0.7rem solid #ddd; border-left:0.6rem solid transparent; border-right:0.6rem solid transparent;}
+.pc .shop_check .tip_more::after {bottom:-1.3rem; border-bottom:0.7rem solid #fff;}
+.pc .shop_check .tip_more.on::before,
+.pc .shop_check .tip_more.on::after {display:block;}
+.pc .shop_check .tip {top:4.8rem; left:1.6rem; right:1.6rem; width:auto; border:0.1rem solid #ddd; border-radius:0.8rem; box-shadow:none;}
+.pc .shop_check .tip ul {padding:2rem;}
+.pc .shop_check .tip button {display:none;}
+
+.pc .shop_list {flex:1; position:initial; max-height:none; /*padding:0 1.6rem;*/ border-radius:0; box-shadow:none; z-index:1;}
+.pc .shop_list > button {padding-top:2rem; pointer-events:none;}
+.pc .shop_list > button::before {display:none;}
+
+/* shop_pop */
+.pc .shop_pop .pop_wrap {max-width:77rem;}
+.pc .shop_pop .pop_content {display:flex; flex-wrap:wrap;}
+.pc .shop_pop .pop_content .pop_l {max-width:32.8rem;}
+.pc .shop_pop .pop_content .pop_r.section {flex:1; max-width:41.2rem; padding-left:2.4rem;}
+.pc .shop_pop .pop_content .pop_r.section{padding-top:0;}
+
+
+
+
+
+
+
+
+
+
+
+/* 내가 찜한 요금제, 최근 둘러본 요금제, 1:1 문의내역 */
+/* .pc .show_more_item .btn_group,
+.pc .show_more_item .btn_group {display:none;}
+.pc .show_more_item .pagination,
+.pc .show_more_item .pagination {display:flex;} */
+/* 알파만의 혜택 */
+/* .pc .crp_benefits_list .acd_st .btn_acd {pointer-events:none;}
+.pc .crp_benefits_list .acd_st .btn_acd::after {display:none;}
+.pc .crp_benefits_list .acdItem [role=region] {display:block !important; height:auto !important; padding:0 2rem 2rem !important;} */
